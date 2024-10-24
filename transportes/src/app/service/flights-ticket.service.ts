@@ -1,5 +1,4 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { inject, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { AirportsList } from "../type/airports-list";
 
@@ -7,7 +6,6 @@ import { AirportsList } from "../type/airports-list";
     providedIn: "root",
 })
 export class FlightsTicketService {
-    private _httpClient = inject(HttpClient);
 
     private airportsList: AirportsList = [
           {
@@ -460,12 +458,274 @@ export class FlightsTicketService {
                 },
             ],
         },
+        {
+            flightsList: [
+                {
+                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
+                    destination: { code: 'REC', city: 'Recife', state: 'PE' },
+                    date: '2024-12-23',
+                    time: '09:00',
+                    prices: {
+                        economy: 420,
+                        business: 1600,
+                        firstClass: 3000,
+                    },
+                },
+                {
+                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
+                    destination: { code: 'SSA', city: 'Salvador', state: 'BA' },
+                    date: '2024-12-24',
+                    time: '12:45',
+                    prices: {
+                        economy: 380,
+                        business: 1500,
+                    },
+                },
+                {
+                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
+                    destination: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
+                    date: '2024-12-25',
+                    time: '16:30',
+                    prices: {
+                        economy: 430,
+                        firstClass: 3200,
+                    },
+                },
+            ],
+        },
+        {
+            flightsList: [
+                {
+                    origin: { code: 'BSB', city: 'Brasília', state: 'DF' },
+                    destination: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
+                    date: '2024-12-26',
+                    time: '14:00',
+                    prices: {
+                        economy: 360,
+                        business: 1300,
+                    },
+                },
+                {
+                    origin: { code: 'BSB', city: 'Brasília', state: 'DF' },
+                    destination: { code: 'REC', city: 'Recife', state: 'PE' },
+                    date: '2024-12-27',
+                    time: '11:00',
+                    prices: {
+                        economy: 320,
+                    },
+                },
+                {
+                    origin: { code: 'BSB', city: 'Brasília', state: 'DF' },
+                    destination: { code: 'NAT', city: 'Natal', state: 'RN' },
+                    date: '2024-12-28',
+                    time: '18:00',
+                    prices: {
+                        economy: 470,
+                        firstClass: 2800,
+                    },
+                },
+            ],
+        },
+        {
+            flightsList: [
+                {
+                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
+                    destination: { code: 'GRU', city: 'São Paulo', state: 'SP' },
+                    date: '2024-12-29',
+                    time: '07:00',
+                    prices: {
+                        economy: 410,
+                        business: 1500,
+                    },
+                },
+                {
+                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
+                    destination: { code: 'CWB', city: 'Curitiba', state: 'PR' },
+                    date: '2024-12-30',
+                    time: '10:30',
+                    prices: {
+                        economy: 390,
+                        business: 1200,
+                        firstClass: 2700,
+                    },
+                },
+                {
+                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
+                    destination: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
+                    date: '2025-01-01',
+                    time: '09:00',
+                    prices: {
+                        economy: 450,
+                    },
+                },
+            ],
+        },
+        {
+            flightsList: [
+                {
+                    origin: { code: 'SSA', city: 'Salvador', state: 'BA' },
+                    destination: { code: 'NAT', city: 'Natal', state: 'RN' },
+                    date: '2025-01-02',
+                    time: '10:00',
+                    prices: {
+                        economy: 350,
+                        business: 1400,
+                    },
+                },
+                {
+                    origin: { code: 'SSA', city: 'Salvador', state: 'BA' },
+                    destination: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
+                    date: '2025-01-03',
+                    time: '15:00',
+                    prices: {
+                        economy: 470,
+                        firstClass: 3200,
+                    },
+                },
+                {
+                    origin: { code: 'SSA', city: 'Salvador', state: 'BA' },
+                    destination: { code: 'CWB', city: 'Curitiba', state: 'PR' },
+                    date: '2025-01-04',
+                    time: '14:30',
+                    prices: {
+                        economy: 390,
+                    },
+                },
+            ],
+        },
+        {
+            flightsList: [
+                {
+                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
+                    destination: { code: 'REC', city: 'Recife', state: 'PE' },
+                    date: '2025-01-05',
+                    time: '16:00',
+                    prices: {
+                        economy: 240,
+                        business: 1000,
+                    },
+                },
+                {
+                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
+                    destination: { code: 'NAT', city: 'Natal', state: 'RN' },
+                    date: '2025-01-06',
+                    time: '11:00',
+                    prices: {
+                        economy: 220,
+                        business: 900,
+                    },
+                },
+                {
+                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
+                    destination: { code: 'SSA', city: 'Salvador', state: 'BA' },
+                    date: '2025-01-07',
+                    time: '09:00',
+                    prices: {
+                        economy: 330,
+                    },
+                },
+            ],
+        },
+        {
+            flightsList: [
+                {
+                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
+                    destination: { code: 'POA', city: 'Porto Alegre', state: 'RS' },
+                    date: '2025-01-08',
+                    time: '12:00',
+                    prices: {
+                        economy: 350,
+                        business: 1300,
+                        firstClass: 2900,
+                    },
+                },
+                {
+                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
+                    destination: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
+                    date: '2025-01-09',
+                    time: '14:00',
+                    prices: {
+                        economy: 290,
+                    },
+                },
+                {
+                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
+                    destination: { code: 'REC', city: 'Recife', state: 'PE' },
+                    date: '2025-01-10',
+                    time: '16:45',
+                    prices: {
+                        economy: 430,
+                        business: 1600,
+                    },
+                },
+            ],
+        },
+        {
+            flightsList: [
+                {
+                    origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
+                    destination: { code: 'SSA', city: 'Salvador', state: 'BA' },
+                    date: '2025-01-11',
+                    time: '11:00',
+                    prices: {
+                        economy: 420,
+                    },
+                },
+                {
+                    origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
+                    destination: { code: 'REC', city: 'Recife', state: 'PE' },
+                    date: '2025-01-12',
+                    time: '14:30',
+                    prices: {
+                        economy: 360,
+                        business: 1300,
+                    },
+                },
+                {
+                    origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
+                    destination: { code: 'NAT', city: 'Natal', state: 'RN' },
+                    date: '2025-01-13',
+                    time: '18:00',
+                    prices: {
+                        economy: 380,
+                        firstClass: 3000,
+                    },
+                },
+            ],
+        },
+        {
+            flightsList: [
+                {
+                    origin: { code: 'REC', city: 'Recife', state: 'PE' },
+                    destination: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
+                    date: '2025-01-14',
+                    time: '09:30',
+                    prices: {
+                        economy: 350,
+                        business: 1400,
+                    },
+                },
+                {
+                    origin: { code: 'REC', city: 'Recife', state: 'PE' },
+                    destination: { code: 'BSB', city: 'Brasília', state: 'DF' },
+                    date: '2025-01-15',
+                    time: '12:45',
+                    prices: {
+                        economy: 320,
+                        firstClass: 290
+                    }
+                }
+            ]
+        },
     ]
 
-         
+    getFlightsTicket(): Observable<AirportsList> {
 
-    // getSearchFlights(): Observable<any> {
-
-    //     return this._httpClient.post<any>();
-    // }
+        return new Observable<AirportsList>((observable) => {
+          setTimeout(() => {
+            observable.next(this.airportsList);
+            observable.complete();
+          }, 500);
+        });
+    }
 }
