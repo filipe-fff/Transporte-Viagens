@@ -1,3 +1,3 @@
-import { IAirport } from "../interface/airports/airport.interface";
+import { IAirportResponse } from "../interface/airports/airport-response.interface";
 
-export type AirportsList  = IAirport[];
+export type AirportsList  = IAirportResponse[];
