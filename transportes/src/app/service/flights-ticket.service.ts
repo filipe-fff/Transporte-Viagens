@@ -201,7 +201,7 @@ export class FlightsTicketService {
             MAO - Manaus (Amazonas)
             BSB - Brasília (Distrito Federal)
             REC - Recife (Pernambuco)
-        FOR - Fortaleza (Ceará)
+            FOR - Fortaleza (Ceará)
     */
 
     /*
@@ -1114,7 +1114,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "MAO", airportName: "Aeroporto de Manaus", city: "", state: "" }
+            origin: { code: "MAO", airportName: "Aeroporto de Manaus", city: "Manaus", state: "Amazonas" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1131,31 +1131,77 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
+                    date: "2024-10-09",
+                    time: "10:30",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 480,
+                            childPrice: 460,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 1490,
+                            childPrice: 1470,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 5600,
+                            childPrice: 5598,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
+                    date: "2024-07-28",
+                    time: "08:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 990,
+                            childPrice: 980,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 5500,
+                            childPrice: 5400,
+                        }
+                    ]
+                },
+                {
+                    destination: { code: "BEL", city: "Belém", state: "Pará" },
+                    date: "2025-04-09",
+                    time: "14:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 440,
+                            childPrice: 430.89,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1560,
+                            childPrice: 1550,
+                        }
+                    ]
+                },
+                {
+                    destination: { code: "NAT", city: "Natal", state: "Rio Grande do Norte" },
+                    date: "2024-05-12",
+                    time: "15:45",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 350.20,
+                            childPrice: 330.21,
                         },
                     ]
                 }
             ]
         },
         {
-            origin: { code: "", airportName: "", city: "", state: "" }
+            origin: { code: "POA", airportName: "Aeroporto de Porto Alegre", city: "Porto Alegre", state: "Rio Grande do Sul" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1172,31 +1218,87 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
+                    date: "2024-11-04",
+                    time: "09:00",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 560,
+                            childPrice: 550,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 1245.90,
+                            childPrice: 1230.90,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 7080.99,
+                            childPrice: 7070.99,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "SDU", city: "Rio de Janeiro", state: "Rio de Janeiro" },
+                    date: "2024-10-31",
+                    time: "12:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 570.8,
+                            childPrice: 560.8,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1680,
+                            childPrice: 1650,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 8000,
+                            childPrice: 8000,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "CWB", city: "Curitiba", state: "Paraná" },
+                    date: "2024-11-01",
+                    time: "05:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 459,
+                            childPrice: 435,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1589.56,
+                            childPrice: 1378.87,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 6876.98,
+                            childPrice: 6497.79,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "CNF", city: "Belo Horizonte", state: "Minas Gerais" },
+                    date: "2024-08-17",
+                    time: "08:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 679.78,
+                            childPrice: 586.80,
                         },
                     ]
                 }
             ]
         },
         {
-            origin: { code: "", airportName: "", city: "", state: "" }
+            origin: { code: "CWB", airportName: "Aeroporto Afonso Pena", city: "Curitiba", state: "Paraná" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1213,31 +1315,87 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
+                    date: "2024-09-30",
+                    time: "09:55",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 345,
+                            childPrice: 324,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 1356,
+                            childPrice: 1336,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 5876,
+                            childPrice: 5476,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
+                    date: "2025-01-31",
+                    time: "08:30",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 679,
+                            childPrice: 648,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 2646,
+                            childPrice: 2527,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "SDU", city: "Rio de Janeiro", state: "Rio de Janeiro" },
+                    date: "2024-12-31",
+                    time: "09:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 345.34,
+                            childPrice: 305.38,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1032.23,
+                            childPrice: 1039.34,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "FLN", city: "Florianópolis", state: "Santa Catarina" },
+                    date: "2024-09-18",
+                    time: "04:45",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 575.35,
+                            childPrice: 535.79,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1756,
+                            childPrice: 1635,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 15000.99,
+                            childPrice: 15000.99,
                         },
                     ]
                 }
             ]
         },
         {
-            origin: { code: "", airportName: "", city: "", state: "" }
+            origin: { code: "FLN", airportName: "Aeroporto Hercílio Luz", city: "Florianópolis", state: "Santa Catarina" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1254,31 +1412,75 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
+                    date: "2025-01-31",
+                    time: "08:45",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 678.43,
+                            childPrice: 634.54,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 2043.34,
+                            childPrice: 2034.43,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 10003.43,
+                            childPrice: 9994.43,
                         },
                     ]
-                }
+                },
+                {
+                    destination: { code: "CWB ", city: "Curitiba", state: "Paraná" },
+                    date: "2025-02-24",
+                    time: "09:20",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 356,
+                            childPrice: 352,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1245.43,
+                            childPrice: 1240.28,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 5035,
+                            childPrice: 5035,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "POA", city: "Porto Alegre", state: "Rio Grande do Sul" },
+                    date: "2024-10-09",
+                    time: "13:55",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 798.9,
+                            childPrice: 768.59,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 2475.88,
+                            childPrice: 2354.68,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 4908,
+                            childPrice: 4908,
+                        },
+                    ]
+                },
             ]
         },
         {
-            origin: { code: "", airportName: "", city: "", state: "" }
+            origin: { code: "VIX", airportName: "Aeroporto de Vitória", city: "Vitória", state: "Espírito Santo" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1295,31 +1497,55 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "GRU ", city: "São Paulo", state: "São Paulo" },
+                    date: "2025-03-27",
+                    time: "11:00",
                     flightClass: [
                         {
-                            type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
-                        },
-                        {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 1456.79,
+                            childPrice: 1365.57,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 7989.6,
+                            childPrice: 7575,
                         },
                     ]
-                }
+                },
+                {
+                    destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
+                    date: "2024-12-16",
+                    time: "07:15",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 686.68,
+                            childPrice: 657.47,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "SDU", city: "Rio de Janeiro", state: "Rio de Janeiro" },
+                    date: "2025-03-01",
+                    time: "10:25",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 586.68,
+                            childPrice: 570.57,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 8685.86,
+                            childPrice: 8685.86,
+                        },
+                    ]
+                },
             ]
         },
         {
-            origin: { code: "", airportName: "", city: "", state: "" }
+            origin: { code: "NAT", airportName: "Aeroporto de Natal", city: "Natal", state: "Rio Grande do Norte" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1336,6 +1562,108 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
+                    destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
+                    date: "2024-08-26",
+                    time: "14:10",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 869.78,
+                            childPrice: 828.68,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 3857.78,
+                            childPrice: 3815.79,
+                        }
+                    ]
+                },
+                {
+                    destination: { code: "FOR", city: "Fortaleza", state: "Ceará" },
+                    date: "2024-11-18",
+                    time: "09:30",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 784.76,
+                            childPrice: 710.76,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 2753.8,
+                            childPrice: 2695,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 7000,
+                            childPrice: 7000,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "REC", city: "Recife", state: "Pernambuco" },
+                    date: "2025-05-30",
+                    time: "07:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 257,
+                            childPrice: 257,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1636,
+                            childPrice: 1600,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 7906,
+                            childPrice: 7859,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "MAO", city: "Manaus", state: "Amazonas" },
+                    date: "2024-11-27",
+                    time: "08:35",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 467,
+                            childPrice: 425,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1485,
+                            childPrice: 1436,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 7574,
+                            childPrice: 7406,
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            origin: { code: "BEL", airportName: "", city: "Belém", state: "Pará" }
+            baggage: [
+                {
+                    type: BaggageTypeEnum.CHECKED,
+                    maxKilo: 21,
+                },
+                {
+                    type: BaggageTypeEnum.HAND_LUGGAGE,
+                    maxKilo: 12,
+                },
+                {
+                    type: BaggageTypeEnum.PERSONAL_ITEM,
+                    maxKilo: 10,
+                },
+            ]
+            flightsList: [
+                {
                     destination: { code: "", city: "", state: "" },
                     date: "",
                     time: "",
@@ -1356,26 +1684,51 @@ export class FlightsTicketService {
                             childPrice: ,
                         },
                     ]
-                }
-            ]
-        },
-        {
-            origin: { code: "", airportName: "", city: "", state: "" }
-            baggage: [
-                {
-                    type: BaggageTypeEnum.CHECKED,
-                    maxKilo: 21,
                 },
                 {
-                    type: BaggageTypeEnum.HAND_LUGGAGE,
-                    maxKilo: 12,
+                    destination: { code: "", city: "", state: "" },
+                    date: "",
+                    time: "",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: ,
+                            childPrice: ,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: ,
+                            childPrice: ,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: ,
+                            childPrice: ,
+                        },
+                    ]
                 },
                 {
-                    type: BaggageTypeEnum.PERSONAL_ITEM,
-                    maxKilo: 10,
+                    destination: { code: "", city: "", state: "" },
+                    date: "",
+                    time: "",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: ,
+                            childPrice: ,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: ,
+                            childPrice: ,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: ,
+                            childPrice: ,
+                        },
+                    ]
                 },
-            ]
-            flightsList: [
                 {
                     destination: { code: "", city: "", state: "" },
                     date: "",
