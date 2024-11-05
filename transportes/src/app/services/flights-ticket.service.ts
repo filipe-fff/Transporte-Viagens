@@ -1,6 +1,9 @@
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { AirportsList } from "../type/airports-list";
+import { AirportsList } from "../types/airports-list";
+import { IAirportResponse } from "../interfaces/airports/airport-response.interface";
+import { BaggageTypeEnum } from "../enums/baggage-type.enum";
+import { FlightClassTypeEnum } from "../enums/flight-class-type.enum";
 
 @Injectable({
     providedIn: "root",
@@ -269,55 +272,68 @@ export class FlightsTicketService {
             POA - Porto Alegre (Rio Grande do Sul)
     */
 
-    airportsList = [
-        {
-            airportName: "",
-            origin: { code: "", city: "", state: "" }
-            baggage: [
-                {
-                    type: BaggageTypeEnum.CHECKED,
-                    maxKilo: ,
-                },
-                {
-                    type: BaggageTypeEnum.HAND_LUGGAGE,
-                    maxKilo: ,
-                },
-                {
-                    type: BaggageTypeEnum.PERSONAL_ITEM,
-                    maxKilo: ,
-                },
-            ]
-            flightsList: [
-                {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
-                    flightClass: [
-                        {
-                            type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
-                        },
-                        {
-                            type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
-                        },
-                        {
-                            type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
-                        },
-                    ]
-                },
+    /*
+        CGR
 
-            ]
-        }
-    ]
+        Nome: Aeroporto Internacional de Campo Grande
+        Estado: Mato Grosso do Sul
+        Cidade: Campo Grande
+        Destinos:
+            GRU - São Paulo (São Paulo)
+            BSB - Brasília (Distrito Federal)
+            CWB - Curitiba (Paraná)
+            REC - Recife (Pernambuco)
+    */
 
-    private airport = [
+    // airportsList = [
+    //     {
+    //         airportName: "",
+    //         origin: { code: "", city: "", state: "" },
+    //         baggage: [
+    //             {
+    //                 type: BaggageTypeEnum.CHECKED,
+    //                 maxKilo: ,
+    //             },
+    //             {
+    //                 type: BaggageTypeEnum.HAND_LUGGAGE,
+    //                 maxKilo: ,
+    //             },
+    //             {
+    //                 type: BaggageTypeEnum.PERSONAL_ITEM,
+    //                 maxKilo: ,
+    //             },
+    //         ],
+    //         flightsList: [
+    //             {
+    //                 destination: { code: "", city: "", state: "" },
+    //                 date: "",
+    //                 time: "",
+    //                 flightClass: [
+    //                     {
+    //                         type: FlightClassTypeEnum.ECONOMY,
+    //                         adultPrice: ,
+    //                         childPrice: ,
+    //                     },
+    //                     {
+    //                         type: FlightClassTypeEnum.BUSINESS,
+    //                         adultPrice: ,
+    //                         childPrice: ,
+    //                     },
+    //                     {
+    //                         type: FlightClassTypeEnum.FIRST_CLASS,
+    //                         adultPrice: ,
+    //                         childPrice: ,
+    //                     },
+    //                 ]
+    //             },
+
+    //         ]
+    //     }
+    // ]
+
+    private airportsList: AirportsList = [
         {
-            origin: { code: "GRU", airportName: "Aeroporto Internacional de Guarulhos", city: "Guarulhos", state: "São Paulo" }
+            origin: { code: "GRU", airportName: "Aeroporto Internacional de Guarulhos", city: "Guarulhos", state: "São Paulo" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -331,7 +347,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 9,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "SDU", city: "Rio de Janeiro", state: "Rio de Janeiro" },
@@ -448,7 +464,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "SDU", airportName: "Aeroporto Santos Dumont", city: "Rio de Janeiro", state: "Rio de Janeiro" }
+            origin: { code: "SDU", airportName: "Aeroporto Santos Dumont", city: "Rio de Janeiro", state: "Rio de Janeiro" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -462,7 +478,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 20,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
@@ -545,7 +561,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "BSB", airportName: "Aeroporto Internacional de Brasília", city: "Brasília", state: "Distrito Federal" }
+            origin: { code: "BSB", airportName: "Aeroporto Internacional de Brasília", city: "Brasília", state: "Distrito Federal" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -559,7 +575,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
@@ -647,7 +663,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "CNF", airportName: "Aeroporto de Confins", city: "Confins", state: "Minas Gerais" }
+            origin: { code: "CNF", airportName: "Aeroporto de Confins", city: "Confins", state: "Minas Gerais" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -661,7 +677,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 11,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
@@ -756,7 +772,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "VCP", airportName: "Aeroporto de Viracopos", city: "Campinas", state: "São Paulo" }
+            origin: { code: "VCP", airportName: "Aeroporto de Viracopos", city: "Campinas", state: "São Paulo" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -770,7 +786,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
@@ -853,7 +869,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "REC", airportName: "Aeroporto do Recife", city: "Recife", state: "Pernambuco" }
+            origin: { code: "REC", airportName: "Aeroporto do Recife", city: "Recife", state: "Pernambuco" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -867,7 +883,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 15,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
@@ -935,7 +951,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "FOR", airportName: "Aeroporto de Fortaleza", city: "Fortaleza", state: "Ceará" }
+            origin: { code: "FOR", airportName: "Aeroporto de Fortaleza", city: "Fortaleza", state: "Ceará" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -949,7 +965,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
@@ -1114,7 +1130,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "MAO", airportName: "Aeroporto de Manaus", city: "Manaus", state: "Amazonas" }
+            origin: { code: "MAO", airportName: "Aeroporto de Manaus", city: "Manaus", state: "Amazonas" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1128,7 +1144,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
@@ -1201,7 +1217,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "POA", airportName: "Aeroporto de Porto Alegre", city: "Porto Alegre", state: "Rio Grande do Sul" }
+            origin: { code: "POA", airportName: "Aeroporto de Porto Alegre", city: "Porto Alegre", state: "Rio Grande do Sul" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1215,7 +1231,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
@@ -1298,7 +1314,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "CWB", airportName: "Aeroporto Afonso Pena", city: "Curitiba", state: "Paraná" }
+            origin: { code: "CWB", airportName: "Aeroporto Afonso Pena", city: "Curitiba", state: "Paraná" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1312,7 +1328,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 9,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
@@ -1395,7 +1411,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "FLN", airportName: "Aeroporto Hercílio Luz", city: "Florianópolis", state: "Santa Catarina" }
+            origin: { code: "FLN", airportName: "Aeroporto Hercílio Luz", city: "Florianópolis", state: "Santa Catarina" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1409,7 +1425,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
@@ -1480,7 +1496,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "VIX", airportName: "Aeroporto de Vitória", city: "Vitória", state: "Espírito Santo" }
+            origin: { code: "VIX", airportName: "Aeroporto de Vitória", city: "Vitória", state: "Espírito Santo" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1494,7 +1510,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "GRU ", city: "São Paulo", state: "São Paulo" },
@@ -1545,7 +1561,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "NAT", airportName: "Aeroporto de Natal", city: "Natal", state: "Rio Grande do Norte" }
+            origin: { code: "NAT", airportName: "Aeroporto de Natal", city: "Natal", state: "Rio Grande do Norte" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1559,7 +1575,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 12,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
@@ -1647,7 +1663,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "BEL", airportName: "Aeroporto de Belém", city: "Belém", state: "Pará" }
+            origin: { code: "BEL", airportName: "Aeroporto de Belém", city: "Belém", state: "Pará" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1661,7 +1677,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "MAO", city: "Manaus", state: "Amazonas" },
@@ -1744,7 +1760,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "GIG", airportName: "Aeroporto Internacional do Galeão", city: "Rio de Janeiro", state: "Rio de Janeiro" }
+            origin: { code: "GIG", airportName: "Aeroporto Internacional do Galeão", city: "Rio de Janeiro", state: "Rio de Janeiro" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1758,7 +1774,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
@@ -1851,7 +1867,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "AJU", airportName: "Aeroporto de Aracaju", city: "Aracaju", state: "Sergipe" }
+            origin: { code: "AJU", airportName: "Aeroporto de Aracaju", city: "Aracaju", state: "Sergipe" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1865,7 +1881,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
@@ -1948,7 +1964,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "MCZ", airportName: "Aeroporto de Maceió", city: "Maceió", state: "Alagoas" }
+            origin: { code: "MCZ", airportName: "Aeroporto de Maceió", city: "Maceió", state: "Alagoas" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1962,7 +1978,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
@@ -2040,7 +2056,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "SLZ", airportName: "Aeroporto de São Luís", city: "São Luís", state: "Maranhão" }
+            origin: { code: "SLZ", airportName: "Aeroporto de São Luís", city: "São Luís", state: "Maranhão" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -2054,7 +2070,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
@@ -2132,7 +2148,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "CGH", airportName: "Aeroporto de Congonhas", city: "São Paulo", state: "São Paulo" }
+            origin: { code: "CGH", airportName: "Aeroporto de Congonhas", city: "São Paulo", state: "São Paulo" },
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -2146,7 +2162,7 @@ export class FlightsTicketService {
                     type: BaggageTypeEnum.PERSONAL_ITEM,
                     maxKilo: 10,
                 },
-            ]
+            ],
             flightsList: [
                 {
                     destination: { code: "SDU", city: "Rio de Janeiro", state: "Rio de Janeiro" },
@@ -2228,6 +2244,103 @@ export class FlightsTicketService {
                 }
             ]
         },
+        {
+            origin: { code: "CGR", airportName: "Aeroporto Internacional de Campo Grande", city: "Campo Grande", state: "Mato Grosso do Sul" },
+            baggage: [
+                {
+                    type: BaggageTypeEnum.CHECKED,
+                    maxKilo: 21,
+                },
+                {
+                    type: BaggageTypeEnum.HAND_LUGGAGE,
+                    maxKilo: 15,
+                },
+                {
+                    type: BaggageTypeEnum.PERSONAL_ITEM,
+                    maxKilo: 11,
+                },
+            ],
+            flightsList: [
+                {
+                    destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
+                    date: "2024-09-17",
+                    time: "06:30",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 400,
+                            childPrice: 380,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1574,
+                            childPrice: 1489,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 3747.64,
+                            childPrice: 3747.64,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
+                    date: "2025-02-26",
+                    time: "09:45",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 545,
+                            childPrice: 486,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1664,
+                            childPrice: 1536,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "CWB", city: "Curitiba", state: "Paraná" },
+                    date: "2024-12-12",
+                    time: "07:20",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 464,
+                            childPrice: 424.56,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1575.46,
+                            childPrice: 1536.06,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "REC", city: "Recife", state: "Pernambuco" },
+                    date: "2025-04-21",
+                    time: "08:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 346.7,
+                            childPrice: 314.68,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 968.67,
+                            childPrice: 946.67,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 7468.67,
+                            childPrice: 7468.67,
+                        },
+                    ]
+                }
+            ]
+        }
     ]
 
     getFlightsTicket(): Observable<AirportsList> {

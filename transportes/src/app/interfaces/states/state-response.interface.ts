@@ -1,4 +1,4 @@
-import { StatesList } from "../../type/states-list";
+import { StatesList } from "../../types/states-list";
 import { ICountryBaseResponse } from "./country-base-response.interface";
 
 export interface IStateResponse extends ICountryBaseResponse {
