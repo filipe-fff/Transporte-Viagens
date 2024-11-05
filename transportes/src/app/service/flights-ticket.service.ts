@@ -1647,7 +1647,7 @@ export class FlightsTicketService {
             ]
         },
         {
-            origin: { code: "BEL", airportName: "", city: "Belém", state: "Pará" }
+            origin: { code: "BEL", airportName: "Aeroporto de Belém", city: "Belém", state: "Pará" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1664,97 +1664,87 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "MAO", city: "Manaus", state: "Amazonas" },
+                    date: "2023-11-04",
+                    time: "5:45",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 550,
+                            childPrice: 520,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
-                        },
-                        {
-                            type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 1789.9,
+                            childPrice: 1689.04,
                         },
                     ]
                 },
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
+                    date: "2025-01-09",
+                    time: "14:30",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 730.07,
+                            childPrice: 690.10,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 2500,
+                            childPrice: 2402.2,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 5900,
+                            childPrice: 5900,
                         },
                     ]
                 },
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "REC", city: "Recife", state: "Pernambuco" },
+                    date: "2024-09-21",
+                    time: "6:45",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 230,
+                            childPrice: 220,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 890,
+                            childPrice: 810,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 3450.99,
+                            childPrice: 3350.99,
                         },
                     ]
                 },
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "FOR", city: "Fortaleza", state: "Ceará" },
+                    date: "2024-12-31",
+                    time: "8:00",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 790.89,
+                            childPrice: 723.98,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
-                        },
-                        {
-                            type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 3567.48,
+                            childPrice: 3453.45,
                         },
                     ]
                 }
             ]
         },
         {
-            origin: { code: "", airportName: "", city: "", state: "" }
+            origin: { code: "GIG", airportName: "Aeroporto Internacional do Galeão", city: "Rio de Janeiro", state: "Rio de Janeiro" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1771,31 +1761,97 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
+                    date: "2025-02-16",
+                    time: "9:20",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 450,
+                            childPrice: 430,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 1456.81,
+                            childPrice: 1357.97,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 6868.57,
+                            childPrice: 6757.03,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
+                    date: "2024-10-09",
+                    time: "11:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 679,
+                            childPrice: 659,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 2566.01,
+                            childPrice: 2364.89,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 7585.09,
+                            childPrice: 7585.09,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "SSA", city: "Salvador", state: "Bahia" },
+                    date: "2025-04-19",
+                    time: "15:30",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 578,
+                            childPrice: 526,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1686,
+                            childPrice: 1626,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 8681.97,
+                            childPrice: 8681.97,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "CNF", city: "Belo Horizonte", state: "Minas Gerais" },
+                    date: "2024-08-25",
+                    time: "8:45",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 685,
+                            childPrice: 598,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 3647,
+                            childPrice: 3547,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 9283.34,
+                            childPrice: 9283.34,
                         },
                     ]
                 }
             ]
         },
         {
-            origin: { code: "", airportName: "", city: "", state: "" }
+            origin: { code: "AJU", airportName: "Aeroporto de Aracaju", city: "Aracaju", state: "Sergipe" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1812,31 +1868,87 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
+                    date: "2024-12-08",
+                    time: "9:00",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 679,
+                            childPrice: 626,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 1896,
+                            childPrice: 1796,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 5747,
+                            childPrice: 5474,
                         },
                     ]
-                }
+                },
+                {
+                    destination: { code: "GRU", city: "São Paulo", state: "São Paulo" },
+                    date: "2025-05-04",
+                    time: "9:20",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 468.97,
+                            childPrice: 436.7,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1474,
+                            childPrice: 1337,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 6858,
+                            childPrice: 6758,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "REC", city: "Recife", state: "Pernambuco" },
+                    date: "2024-08-26",
+                    time: "9:30",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 685,
+                            childPrice: 647,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1748.8,
+                            childPrice: 1607.09,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 7960.98,
+                            childPrice: 7885.97,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "SSA", city: "Salvador", state: "Bahia" },
+                    date: "2024-08-30",
+                    time: "7:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 464,
+                            childPrice: 436,
+                        }
+                    ]
+                },
             ]
         },
         {
-            origin: { code: "", airportName: "", city: "", state: "" }
+            origin: { code: "MCZ", airportName: "Aeroporto de Maceió", city: "Maceió", state: "Alagoas" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1853,31 +1965,82 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
+                    date: "2024-09-28",
+                    time: "09:30",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 368,
+                            childPrice: 320,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 970,
+                            childPrice: 959.8,
+                        }
+                    ]
+                },
+                {
+                    destination: { code: "REC", city: "Recife", state: "Pernambuco" },
+                    date: "2025-02-19",
+                    time: "07:45",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 785.96,
+                            childPrice: 474.87,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 3648.09,
+                            childPrice: 3277.6,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 7585,
+                            childPrice: 7585,
                         },
+                    ]
+                },
+                {
+                    destination: { code: "FOR", city: "Fortaleza", state: "Ceará" },
+                    date: "2024-12-07",
+                    time: "12:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 475,
+                            childPrice: 437,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1474,
+                            childPrice: 1426,
+                        }
+                    ]
+                },
+                {
+                    destination: { code: "SAL", city: "Salvador", state: "Bahia" },
+                    date: "2024-01-28",
+                    time: "11:30",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 647.9,
+                            childPrice: 638.98,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 2075.9,
+                            childPrice: 1958.6,
+                        }
                     ]
                 }
             ]
         },
         {
-            origin: { code: "", airportName: "", city: "", state: "" }
+            origin: { code: "SLZ", airportName: "Aeroporto de São Luís", city: "São Luís", state: "Maranhão" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1894,31 +2057,82 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
+                    date: "2024-09-15",
+                    time: "09:00",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 390,
+                            childPrice: 350.8,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 979,
+                            childPrice: 927.09,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "MAO", city: "Manaus", state: "Amazonas" },
+                    date: "2025-04-19",
+                    time: "12:45",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 575,
+                            childPrice: 353,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 2538,
+                            childPrice: 2006,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "REC", city: "Recife", state: "Pernambuco" },
+                    date: "2024-08-29",
+                    time: "10:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 675.79,
+                            childPrice: 609.8,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 2546,
+                            childPrice: 2353.8,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 7869.12,
+                            childPrice: 7747.89,
+                        },
+                    ]
+                },
+                {
+                    destination: { code: "FOR", city: "Fortaleza", state: "Ceará" },
+                    date: "2025-03-05",
+                    time: "08:20",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 786,
+                            childPrice: 685.8,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 5757.97,
+                            childPrice: 5757.97,
                         },
                     ]
                 }
             ]
         },
         {
-            origin: { code: "", airportName: "", city: "", state: "" }
+            origin: { code: "CGH", airportName: "Aeroporto de Congonhas", city: "São Paulo", state: "São Paulo" }
             baggage: [
                 {
                     type: BaggageTypeEnum.CHECKED,
@@ -1935,738 +2149,82 @@ export class FlightsTicketService {
             ]
             flightsList: [
                 {
-                    destination: { code: "", city: "", state: "" },
-                    date: "",
-                    time: "",
+                    destination: { code: "SDU", city: "Rio de Janeiro", state: "Rio de Janeiro" },
+                    date: "2024-11-21",
+                    time: "09:45",
                     flightClass: [
                         {
                             type: FlightClassTypeEnum.ECONOMY,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 549,
+                            childPrice: 498,
                         },
                         {
                             type: FlightClassTypeEnum.BUSINESS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 1793,
+                            childPrice: 1634,
                         },
                         {
                             type: FlightClassTypeEnum.FIRST_CLASS,
-                            adultPrice: ,
-                            childPrice: ,
+                            adultPrice: 2342,
+                            childPrice: 2142.3,
                         },
                     ]
-                }
-            ]
-        },
-    ]
-
-    private airportsList: AirportsList = [
-          {
-              flightsList: [
-                  {
-                      origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                      destination: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                      date: '2024-10-30',
-                      time: '08:00',
-                      prices: {
-                          economy: 300,
-                          business: 1200,
-                          firstClass: 2500,
-                      },
-                  },
-                  {
-                      origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                      destination: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                      date: '2024-10-31',
-                      time: '10:30',
-                      prices: {
-                          economy: 350,
-                          business: 1300,
-                          firstClass: 2700,
-                      },
-                  },
-                  {
-                      origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                      destination: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                      date: '2024-11-01',
-                      time: '09:15',
-                      prices: {
-                          economy: 250,
-                          business: 1000,
-                          firstClass: 2200,
-                      },
-                  },
-              ],
-          },
-          {
-              flightsList: [
-                  {
-                      origin: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                      destination: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                      date: '2024-11-05',
-                      time: '09:00',
-                      prices: {
-                          economy: 320,
-                          business: 1250,
-                          firstClass: 2600,
-                      },
-                  },
-                  {
-                      origin: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                      destination: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                      date: '2024-11-06',
-                      time: '11:45',
-                      prices: {
-                          economy: 290,
-                          business: 1100,
-                          firstClass: 2500,
-                      },
-                  },
-                  {
-                      origin: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                      destination: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                      date: '2024-11-09',
-                      time: '15:00',
-                      prices: {
-                          economy: 400,
-                          business: 1500,
-                      },
-                  },
-              ],
-          },
-          {
-              flightsList: [
-                  {
-                      origin: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                      destination: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                      date: '2024-11-10',
-                      time: '12:00',
-                      prices: {
-                          economy: 380,
-                          business: 1350,
-                          firstClass: 2750,
-                      },
-                  },
-                  {
-                      origin: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                      destination: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                      date: '2024-11-11',
-                      time: '14:00',
-                      prices: {
-                          economy: 420,
-                      },
-                  },
-                  {
-                      origin: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                      destination: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                      date: '2024-11-12',
-                      time: '17:30',
-                      prices: {
-                          economy: 360,
-                          business: 1300,
-                      },
-                  },
-                  {
-                      origin: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                      destination: { code: 'NAT', city: 'Natal', state: 'RN' },
-                      date: '2024-11-13',
-                      time: '16:00',
-                      prices: {
-                          economy: 490,
-                          business: 1500,
-                          firstClass: 2900,
-                      },
-                  },
-              ],
-          },
-          {
-              flightsList: [
-                  {
-                      origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                      destination: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                      date: '2024-11-15',
-                      time: '07:30',
-                      prices: {
-                          economy: 280,
-                          business: 1150,
-                          firstClass: 2400,
-                      },
-                  },
-                  {
-                      origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                      destination: { code: 'POA', city: 'Porto Alegre', state: 'RS' },
-                      date: '2024-11-16',
-                      time: '09:15',
-                      prices: {
-                          economy: 150,
-                      },
-                  },
-                  {
-                      origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                      destination: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                      date: '2024-11-17',
-                      time: '13:00',
-                      prices: {
-                          economy: 180,
-                          business: 900,
-                      },
-                  },
-              ],
-          },
-          {
-              flightsList: [
-                  {
-                      origin: { code: 'POA', city: 'Porto Alegre', state: 'RS' },
-                      destination: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                      date: '2024-11-20',
-                      time: '10:00',
-                      prices: {
-                          economy: 200,
-                      },
-                  },
-                  {
-                      origin: { code: 'POA', city: 'Porto Alegre', state: 'RS' },
-                      destination: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                      date: '2024-11-21',
-                      time: '12:00',
-                      prices: {
-                          economy: 350,
-                          business: 1300,
-                      },
-                  },
-                  {
-                      origin: { code: 'POA', city: 'Porto Alegre', state: 'RS' },
-                      destination: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                      date: '2024-11-22',
-                      time: '17:00',
-                      prices: {
-                          economy: 400,
-                          business: 1400,
-                      },
-                  },
-              ],
-          },
-          {
-              flightsList: [
-                  {
-                      origin: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                      destination: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                      date: '2024-11-24',
-                      time: '08:00',
-                      prices: {
-                          economy: 180,
-                      },
-                  },
-                  {
-                      origin: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                      destination: { code: 'NAT', city: 'Natal', state: 'RN' },
-                      date: '2024-11-25',
-                      time: '10:30',
-                      prices: {
-                          economy: 400,
-                          business: 1400,
-                      },
-                  },
-                  {
-                      origin: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                      destination: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                      date: '2024-11-26',
-                      time: '15:00',
-                      prices: {
-                          economy: 320,
-                      },
-                  },
-              ],
-          },
-          {
-              flightsList: [
-                  {
-                      origin: { code: 'NAT', city: 'Natal', state: 'RN' },
-                      destination: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                      date: '2024-11-27',
-                      time: '11:00',
-                      prices: {
-                          economy: 350,
-                      },
-                  },
-                  {
-                      origin: { code: 'NAT', city: 'Natal', state: 'RN' },
-                      destination: { code: 'REC', city: 'Recife', state: 'PE' },
-                      date: '2024-11-28',
-                      time: '15:00',
-                      prices: {
-                          economy: 300,
-                          business: 1200,
-                      },
-                  },
-                  {
-                      origin: { code: 'NAT', city: 'Natal', state: 'RN' },
-                      destination: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                      date: '2024-11-29',
-                      time: '18:00',
-                      prices: {
-                          economy: 420,
-                      },
-                  },
-              ],
-          },
-          {
-            flightsList: [
-                  {
-                    origin: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                    destination: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                    date: '2024-11-30',
-                    time: '09:30',
-                    prices: {
-                        economy: 350,
-                        business: 1300,
-                    }
-                  },
-                  {
-                    origin: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                    destination: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                    date: '2024-12-01',
-                    time: '14:00',
-                    prices: {
-                        economy: 400,
-                    },
                 },
                 {
-                    origin: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                    destination: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                    date: '2024-12-02',
-                    time: '16:45',
-                    prices: {
-                        economy: 450,
-                        business: 1350,
-                        firstClass: 2800,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'REC', city: 'Recife', state: 'PE' },
-                    destination: { code: 'NAT', city: 'Natal', state: 'RN' },
-                    date: '2024-12-05',
-                    time: '08:00',
-                    prices: {
-                        economy: 150,
-                    },
+                    destination: { code: "CNF", city: "Belo Horizonte", state: "Minas Gerais" },
+                    date: "2025-01-01",
+                    time: "12:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 234,
+                            childPrice: 234,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 834.39,
+                            childPrice: 803.23,
+                        },
+                    ]
                 },
                 {
-                    origin: { code: 'REC', city: 'Recife', state: 'PE' },
-                    destination: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                    date: '2024-12-06',
-                    time: '10:00',
-                    prices: {
-                        economy: 280,
-                        business: 1000,
-                    },
+                    destination: { code: "BSB", city: "Brasília", state: "Distrito Federal" },
+                    date: "2024-07-12",
+                    time: "08:00",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 434.3,
+                            childPrice: 409.9,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1243,
+                            childPrice: 1209,
+                        },
+                        {
+                            type: FlightClassTypeEnum.FIRST_CLASS,
+                            adultPrice: 6838,
+                            childPrice: 6838,
+                        },
+                    ]
                 },
                 {
-                    origin: { code: 'REC', city: 'Recife', state: 'PE' },
-                    destination: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                    date: '2024-12-07',
-                    time: '12:30',
-                    prices: {
-                        economy: 320,
-                        business: 1200,
-                        firstClass: 2700,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                    destination: { code: 'POA', city: 'Porto Alegre', state: 'RS' },
-                    date: '2024-12-10',
-                    time: '09:00',
-                    prices: {
-                        economy: 150,
-                    },
-                },
-                {
-                    origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                    destination: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                    date: '2024-12-11',
-                    time: '12:00',
-                    prices: {
-                        economy: 180,
-                        business: 900,
-                    },
-                },
-                {
-                    origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                    destination: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                    date: '2024-12-12',
-                    time: '16:00',
-                    prices: {
-                        economy: 250,
-                        business: 1000,
-                        firstClass: 2200,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                    destination: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                    date: '2024-12-15',
-                    time: '10:00',
-                    prices: {
-                        economy: 320,
-                    },
-                },
-                {
-                    origin: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                    destination: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                    date: '2024-12-16',
-                    time: '12:00',
-                    prices: {
-                        economy: 400,
-                        business: 1400,
-                    },
-                },
-                {
-                    origin: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                    destination: { code: 'NAT', city: 'Natal', state: 'RN' },
-                    date: '2024-12-17',
-                    time: '15:00',
-                    prices: {
-                        economy: 290,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                    destination: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                    date: '2024-12-20',
-                    time: '08:30',
-                    prices: {
-                        economy: 300,
-                    },
-                },
-                {
-                    origin: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                    destination: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                    date: '2024-12-21',
-                    time: '12:00',
-                    prices: {
-                        economy: 320,
-                        business: 1200,
-                    },
-                },
-                {
-                    origin: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                    destination: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                    date: '2024-12-22',
-                    time: '14:45',
-                    prices: {
-                        economy: 350,
-                        business: 1300,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'POA', city: 'Porto Alegre', state: 'RS' },
-                    destination: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                    date: '2024-12-25',
-                    time: '09:00',
-                    prices: {
-                        economy: 400,
-                        business: 1400,
-                        firstClass: 3000,
-                    },
-                },
-                {
-                    origin: { code: 'POA', city: 'Porto Alegre', state: 'RS' },
-                    destination: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                    date: '2024-12-26',
-                    time: '11:30',
-                    prices: {
-                        economy: 350,
-                        business: 1300,
-                    },
-                },
-                {
-                    origin: { code: 'POA', city: 'Porto Alegre', state: 'RS' },
-                    destination: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                    date: '2024-12-27',
-                    time: '16:00',
-                    prices: {
-                        economy: 250,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                    destination: { code: 'REC', city: 'Recife', state: 'PE' },
-                    date: '2024-12-23',
-                    time: '09:00',
-                    prices: {
-                        economy: 420,
-                        business: 1600,
-                        firstClass: 3000,
-                    },
-                },
-                {
-                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                    destination: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                    date: '2024-12-24',
-                    time: '12:45',
-                    prices: {
-                        economy: 380,
-                        business: 1500,
-                    },
-                },
-                {
-                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                    destination: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
-                    date: '2024-12-25',
-                    time: '16:30',
-                    prices: {
-                        economy: 430,
-                        firstClass: 3200,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                    destination: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
-                    date: '2024-12-26',
-                    time: '14:00',
-                    prices: {
-                        economy: 360,
-                        business: 1300,
-                    },
-                },
-                {
-                    origin: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                    destination: { code: 'REC', city: 'Recife', state: 'PE' },
-                    date: '2024-12-27',
-                    time: '11:00',
-                    prices: {
-                        economy: 320,
-                    },
-                },
-                {
-                    origin: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                    destination: { code: 'NAT', city: 'Natal', state: 'RN' },
-                    date: '2024-12-28',
-                    time: '18:00',
-                    prices: {
-                        economy: 470,
-                        firstClass: 2800,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
-                    destination: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                    date: '2024-12-29',
-                    time: '07:00',
-                    prices: {
-                        economy: 410,
-                        business: 1500,
-                    },
-                },
-                {
-                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
-                    destination: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                    date: '2024-12-30',
-                    time: '10:30',
-                    prices: {
-                        economy: 390,
-                        business: 1200,
-                        firstClass: 2700,
-                    },
-                },
-                {
-                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
-                    destination: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                    date: '2025-01-01',
-                    time: '09:00',
-                    prices: {
-                        economy: 450,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                    destination: { code: 'NAT', city: 'Natal', state: 'RN' },
-                    date: '2025-01-02',
-                    time: '10:00',
-                    prices: {
-                        economy: 350,
-                        business: 1400,
-                    },
-                },
-                {
-                    origin: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                    destination: { code: 'FLN', city: 'Florianópolis', state: 'SC' },
-                    date: '2025-01-03',
-                    time: '15:00',
-                    prices: {
-                        economy: 470,
-                        firstClass: 3200,
-                    },
-                },
-                {
-                    origin: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                    destination: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                    date: '2025-01-04',
-                    time: '14:30',
-                    prices: {
-                        economy: 390,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
-                    destination: { code: 'REC', city: 'Recife', state: 'PE' },
-                    date: '2025-01-05',
-                    time: '16:00',
-                    prices: {
-                        economy: 240,
-                        business: 1000,
-                    },
-                },
-                {
-                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
-                    destination: { code: 'NAT', city: 'Natal', state: 'RN' },
-                    date: '2025-01-06',
-                    time: '11:00',
-                    prices: {
-                        economy: 220,
-                        business: 900,
-                    },
-                },
-                {
-                    origin: { code: 'FOR', city: 'Fortaleza', state: 'CE' },
-                    destination: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                    date: '2025-01-07',
-                    time: '09:00',
-                    prices: {
-                        economy: 330,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                    destination: { code: 'POA', city: 'Porto Alegre', state: 'RS' },
-                    date: '2025-01-08',
-                    time: '12:00',
-                    prices: {
-                        economy: 350,
-                        business: 1300,
-                        firstClass: 2900,
-                    },
-                },
-                {
-                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                    destination: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                    date: '2025-01-09',
-                    time: '14:00',
-                    prices: {
-                        economy: 290,
-                    },
-                },
-                {
-                    origin: { code: 'GRU', city: 'São Paulo', state: 'SP' },
-                    destination: { code: 'REC', city: 'Recife', state: 'PE' },
-                    date: '2025-01-10',
-                    time: '16:45',
-                    prices: {
-                        economy: 430,
-                        business: 1600,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                    destination: { code: 'SSA', city: 'Salvador', state: 'BA' },
-                    date: '2025-01-11',
-                    time: '11:00',
-                    prices: {
-                        economy: 420,
-                    },
-                },
-                {
-                    origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                    destination: { code: 'REC', city: 'Recife', state: 'PE' },
-                    date: '2025-01-12',
-                    time: '14:30',
-                    prices: {
-                        economy: 360,
-                        business: 1300,
-                    },
-                },
-                {
-                    origin: { code: 'CWB', city: 'Curitiba', state: 'PR' },
-                    destination: { code: 'NAT', city: 'Natal', state: 'RN' },
-                    date: '2025-01-13',
-                    time: '18:00',
-                    prices: {
-                        economy: 380,
-                        firstClass: 3000,
-                    },
-                },
-            ],
-        },
-        {
-            flightsList: [
-                {
-                    origin: { code: 'REC', city: 'Recife', state: 'PE' },
-                    destination: { code: 'GIG', city: 'Rio de Janeiro', state: 'RJ' },
-                    date: '2025-01-14',
-                    time: '09:30',
-                    prices: {
-                        economy: 350,
-                        business: 1400,
-                    },
-                },
-                {
-                    origin: { code: 'REC', city: 'Recife', state: 'PE' },
-                    destination: { code: 'BSB', city: 'Brasília', state: 'DF' },
-                    date: '2025-01-15',
-                    time: '12:45',
-                    prices: {
-                        economy: 320,
-                        firstClass: 290
-                    }
+                    destination: { code: "POA", city: "Porto Alegre", state: "Rio Grande do Sul" },
+                    date: "2025-03-04",
+                    time: "10:45",
+                    flightClass: [
+                        {
+                            type: FlightClassTypeEnum.ECONOMY,
+                            adultPrice: 435.83,
+                            childPrice: 397.77,
+                        },
+                        {
+                            type: FlightClassTypeEnum.BUSINESS,
+                            adultPrice: 1342.82,
+                            childPrice: 1304.09,
+                        },
+                    ]
                 }
             ]
         },
