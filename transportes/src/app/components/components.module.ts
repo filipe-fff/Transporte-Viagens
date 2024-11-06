@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { FlightTransportComponent } from './flight-transport/flight-transport.component';
 import { TransportInfosItemComponent } from './transport-infos-item/transport-infos-item.component';
+import { FlightTransportEditComponent } from './flight-transport-edit/flight-transport-edit.component';
 
 
 
@@ -13,6 +14,7 @@ import { TransportInfosItemComponent } from './transport-infos-item/transport-in
     TransportContainerComponent,
     FlightTransportComponent,
     TransportInfosItemComponent,
+    FlightTransportEditComponent,
   ],
   imports: [
     CommonModule,
