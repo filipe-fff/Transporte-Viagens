@@ -10,6 +10,7 @@ import { StatesService } from '../../services/states.service';
   styleUrl: './transport-container.component.scss'
 })
 export class TransportContainerComponent implements OnInit {
+  isInEditModel: boolean = true;
   _flightsTicketService = inject(FlightsTicketService);
   _statesService = inject(StatesService);
 
@@ -17,5 +18,17 @@ export class TransportContainerComponent implements OnInit {
 
   ngOnInit(): void {
       
+  }
+
+  onButtonCancel() {
+    this.isInEditModel = false;
+  }
+
+  onButtonSave() {
+    console.log("onButtonSave");
+  }
+
+  onButtonEdit() {
+    this.isInEditModel = true;
   }
 }

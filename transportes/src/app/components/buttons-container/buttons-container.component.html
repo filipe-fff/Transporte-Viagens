@@ -1,0 +1,14 @@
+<div class="flex gap-4 justify-end">
+    <button
+        *ngIf="isInEditModel"
+        class="bg-red-600 hover:bg-red-300 text-lg px-3 py-2 font-semibold leading-5 text-white rounded-lg"
+        (click)="onButtonCancel()">Cancelar</button>
+    <button
+        *ngIf="isInEditModel"
+        class="bg-green-600 hover:bg-green-300 text-lg px-3 py-2 font-semibold leading-5 text-white rounded-lg"
+        (click)="onButtonSave()">Salvar</button>
+    <button
+        *ngIf="!isInEditModel"
+        class="bg-blue-600 hover:bg-blue-300 text-lg px-3 py-2 font-semibold leading-5 text-white rounded-lg"
+        (click)="onButtonEdit()">Editar</button>
+</div>

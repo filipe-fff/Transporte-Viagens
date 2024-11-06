@@ -6,6 +6,7 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
 import { FlightTransportComponent } from './flight-transport/flight-transport.component';
 import { TransportInfosItemComponent } from './transport-infos-item/transport-infos-item.component';
 import { FlightTransportEditComponent } from './flight-transport-edit/flight-transport-edit.component';
+import { ButtonsContainerComponent } from './buttons-container/buttons-container.component';
 
 
 
@@ -15,6 +16,7 @@ import { FlightTransportEditComponent } from './flight-transport-edit/flight-tra
     FlightTransportComponent,
     TransportInfosItemComponent,
     FlightTransportEditComponent,
+    ButtonsContainerComponent,
   ],
   imports: [
     CommonModule,
