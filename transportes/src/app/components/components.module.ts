@@ -7,6 +7,7 @@ import { FlightTransportComponent } from './flight-transport/flight-transport.co
 import { TransportInfosItemComponent } from './transport-infos-item/transport-infos-item.component';
 import { FlightTransportEditComponent } from './flight-transport-edit/flight-transport-edit.component';
 import { ButtonsContainerComponent } from './buttons-container/buttons-container.component';
+import { provideEnvironmentNgxMask } from 'ngx-mask';
 
 
 
@@ -22,9 +23,13 @@ import { ButtonsContainerComponent } from './buttons-container/buttons-container
     CommonModule,
     HttpClientModule,
     AngularMaterialModule,
+    HttpClientModule,
   ],
   exports: [
     TransportContainerComponent,
+  ],
+  providers: [
+    provideEnvironmentNgxMask(),
   ]
 })
 export class ComponentsModule { }

@@ -4,6 +4,7 @@
         <app-flight-transport-edit *ngIf="isInEditModel"></app-flight-transport-edit>
         <app-buttons-container
             [isInEditModel]="isInEditModel"
+            [isDirty]="false"
             (onButtonCancel)="onButtonCancel()"
             (onButtonSave)="onButtonSave()"
             (onButtonEdit)="onButtonEdit()"></app-buttons-container>

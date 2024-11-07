@@ -6,7 +6,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './buttons-container.component.scss'
 })
 export class ButtonsContainerComponent {
-  @Input({ required: true }) isInEditModel: boolean = true;
+  @Input({ required: true }) isInEditModel!: boolean;
+  @Input({ required: true }) isDirty!: boolean;
   @Output("onButtonCancel") onButtonCancelEmitt = new EventEmitter<void>();
   @Output("onButtonSave") onButtonSaveEmitt = new EventEmitter<void>();
   @Output("onButtonEdit") onButtonEditEmitt = new EventEmitter<void>();
