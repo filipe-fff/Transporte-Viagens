@@ -1,39 +1,48 @@
 <div class="p-4 gap-4">
-    <div class="font-semibold text-xl">Passagem:</div>
-    <div class="p-4 gap-4 grid lg:grid-cols-3">
-        <mat-form-field>
-            <mat-label>Passagem Mínima:</mat-label>
-            <input matInput>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Passagem Máxima:</mat-label>
-            <input matInput>
-        </mat-form-field>
-    </div>
     <div class="font-semibold text-xl">Passageiros:</div>
-    <div class="p-4 gap-4 grid lg:grid-cols-3">
+    <div class="p-4 gap-4 grid sm:grid-cols-3">
         <mat-form-field>
             <mat-label>Adultos:</mat-label>
-            <input matInput>
+            <input
+                matInput
+                thousandSeparator="."
+                decimalMarker=","
+                mask="separator.0">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Crianças:</mat-label>
-            <input matInput>
+            <input
+                matInput
+                thousandSeparator="."
+                decimalMarker=","
+                mask="separator.0">
         </mat-form-field>
     </div>
-    <div class="font-semibold text-xl">Partida:</div>
-    <div class="p-4 gap-4 grid lg:grid-cols-3">
+    <div class="font-semibold text-xl">Viajem:</div>
+    <div class="p-4 gap-4 grid sm:grid-cols-3">
         <mat-form-field>
             <mat-label>Estado:</mat-label>
             <input matInput>
         </mat-form-field>
         <mat-form-field>
-            <mat-label>Data Mínima:</mat-label>
-            <input matInput>
+            <mat-label>Passagem Máxima:</mat-label>
+            <span *ngIf="" matTextPrefix>R$</span>
+            <input
+                matInput
+                thousandSeparator="."
+                decimalMarker=","
+                mask="separator.2">
         </mat-form-field>
         <mat-form-field>
-            <mat-label>Data Máxima:</mat-label>
-            <input matInput>
+            <mat-label>Data:</mat-label>
+            <mat-date-range-input
+                [rangePicker]="dateFlight">
+                <input matStartDate placeholder="data mínima" type="text">
+                <input matEndDate placeholder="data máxima" type="text">
+            </mat-date-range-input>
+            <mat-hint>dd/mm/yyyy - dd/mm/yyyy</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="dateFlight"></mat-datepicker-toggle>
+            <mat-date-range-picker #dateFlight></mat-date-range-picker>
         </mat-form-field>
     </div>
 </div>

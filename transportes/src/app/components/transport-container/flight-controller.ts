@@ -7,16 +7,13 @@ export class FlightController {
 
     createFlightForm() {
         this.flightForm = this._fb.group({
-            ticket: this._fb.group({
-                ticket_min: [100],
-                ticket_max: [1000]
-            }),
             passengers: this._fb.group({
                 adults: [0],
                 child: [0]
             }),
-            match: this._fb.group({
+            trip: this._fb.group({
                 state: [null],
+                ticket_max: [100],
                 date_min: new Date("2024-06-01"),
                 date_max: new Date("2025-06-01"),
             })
