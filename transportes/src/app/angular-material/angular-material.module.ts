@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { provideNativeDateAdapter } from '@angular/material/core';
 
 
@@ -15,6 +16,7 @@ import { provideNativeDateAdapter } from '@angular/material/core';
     MatInputModule,
     MatButtonModule,
     MatDatepickerModule,
+    MatAutocompleteModule,
   ],
   exports: [
     MatCardModule,
@@ -22,6 +24,7 @@ import { provideNativeDateAdapter } from '@angular/material/core';
     MatInputModule,
     MatButtonModule,
     MatDatepickerModule,
+    MatAutocompleteModule,
   ],
   providers: [
     provideNativeDateAdapter(),

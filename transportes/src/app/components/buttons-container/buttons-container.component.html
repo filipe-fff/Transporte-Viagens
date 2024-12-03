@@ -2,13 +2,13 @@
     <button
         *ngIf="isInEditModel"
         class="bg-red-600 hover:bg-red-300 text-lg px-3 py-2 font-semibold leading-5 text-white rounded-lg"
-        (click)="onButtonCancel()">Cancelar</button>
+        (click)="onCancelButton()">Cancelar</button>
     <button
         *ngIf="isInEditModel"
         class="bg-green-600 hover:bg-green-300 text-lg px-3 py-2 font-semibold leading-5 text-white rounded-lg"
-        (click)="onButtonSave()">Procurar</button>
+        (click)="onFindButton()">Procurar</button>
     <button
         *ngIf="!isInEditModel"
         class="bg-blue-600 hover:bg-blue-300 text-lg px-3 py-2 font-semibold leading-5 text-white rounded-lg"
-        (click)="onButtonEdit()">Editar</button>
+        (click)="onEditButton()">Editar</button>
 </div>

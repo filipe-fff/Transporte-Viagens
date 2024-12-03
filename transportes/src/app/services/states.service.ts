@@ -11,6 +11,6 @@ export class StatesService {
     _httpClient = inject(HttpClient);
 
     getStates(countryName: string): Observable<StatesList> {
-        return this._httpClient.post<IStateResponse>("https://countriesnow.space/api/v0.1/countries/states", countryName).pipe(map((statesResponse) => statesResponse.data.states));
+        return this._httpClient.post<IStateResponse>("https://countriesnow.space/api/v0.1/countries/states", { country: countryName }).pipe(map((statesResponse) => statesResponse.data.states));
     }
 }

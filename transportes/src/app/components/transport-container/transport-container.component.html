@@ -1,12 +1,21 @@
 <div class="p-4">
-    <mat-card class="p-4 m-auto max-w-3xl">
-        <app-flight-transport *ngIf="!isInEditModel"></app-flight-transport>
-        <app-flight-transport-edit *ngIf="isInEditModel"></app-flight-transport-edit>
+    <mat-card class="p-4 m-auto max-w-5xl">
+        <app-flight-transport
+            *ngIf="!isInEditModel"
+            [flightForm]="flightFormDisplay"></app-flight-transport>
+        <app-flight-transport-edit
+            [flightForm]="flightForm"
+            [statesList]="statesList"
+            *ngIf="isInEditModel"></app-flight-transport-edit>
         <app-buttons-container
             [isInEditModel]="isInEditModel"
             [isDirty]="false"
-            (onButtonCancel)="onButtonCancel()"
-            (onButtonSave)="onButtonSave()"
-            (onButtonEdit)="onButtonEdit()"></app-buttons-container>
+            (onCancelButton)="onCancelButton()"
+            (onFindButton)="onFindButton()"
+            (onEditButton)="onEditButton()">
+        </app-buttons-container>
+        <div class="p-4 ml-auto font-semibold">Aéroportos: {{ flightsListCount }}</div>
+        <app-icons-descriptions></app-icons-descriptions>
+        <app-flights-card-list [flightsList]="flightsList"></app-flights-card-list>
     </mat-card>
 </div>

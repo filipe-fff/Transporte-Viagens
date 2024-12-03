@@ -1,0 +1,33 @@
+<div class="p-4 gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <mat-card class=" w-64 m-auto" *ngFor="let flight of flightsDisplayCardList">
+        <mat-card-header></mat-card-header>
+        <mat-card-content>
+            <div class="grid gap-4 w-full items-center">
+                <app-airport-card>
+                    <div title>Origem</div>
+                    <div code>{{ flight.flightOrigin.code }}</div>
+                    <div airport>{{ flight.flightOrigin.airportName }}</div>
+                    <div city>{{ flight.flightOrigin.city }}</div>
+                    <div state>{{ flight.flightOrigin.state }}</div>
+                </app-airport-card>
+                <app-airport-card>
+                    <div title>Destino</div>
+                    <div code>{{ flight.flightDestination }}</div>
+                    <div airport>{{ flight.flightDestination.airportName }}</div>
+                    <div city>{{ flight.flightDestination.city }}</div>
+                    <div state>{{ flight.flightDestination.state }}</div>
+                </app-airport-card>
+                <div class="grid grid-cols-3 gap-4 text-orange-400">
+                    <div *ngFor="let priceType of flight.pricesTypesList">
+                        <img [src]="priceType.type| iconPrice" class="rounded-sm" width="25">
+                        <div class="text-orange-400">{{ priceType.price === '-'? priceType.price : priceType.price | currency }}</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>{{ flight.date | date : "dd/MM/YYYY" }}<div class="text-gray-600"></div></div>
+                    <div>{{ flight.time }}<div class="text-gray-600"></div></div>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

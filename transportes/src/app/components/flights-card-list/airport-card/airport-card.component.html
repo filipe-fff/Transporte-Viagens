@@ -1,0 +1,24 @@
+<div>
+    <div class="flex flex-row font-semibold text-blue-800">
+        <ng-content select="[title]"></ng-content>
+        <div>:</div>
+    </div>
+    <div class="grid grid-cols-2">
+        <div>
+            <div class="text-gray-600">código:</div>
+            <ng-content select="[code]"></ng-content>
+        </div>
+        <div>
+            <div class="text-gray-600">aéroporto:</div>
+            <ng-content select="[airport]"></ng-content>
+        </div>
+        <div>
+            <div class="text-gray-600">cidade:</div>
+            <ng-content select="[city]"></ng-content>
+        </div>
+        <div>
+            <div class="text-gray-600">estado:</div>
+            <ng-content select="[state]"></ng-content>
+        </div>
+    </div>
+</div>

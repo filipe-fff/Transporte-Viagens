@@ -1,48 +1,60 @@
-<div class="p-4 gap-4">
-    <div class="font-semibold text-xl">Passageiros:</div>
-    <div class="p-4 gap-4 grid sm:grid-cols-3">
+<form [formGroup]="flightForm" class="p-4 gap-4">
+    <div class="font-semibold text-xl">Classes:</div>
+    <div formGroupName="price" class="p-4 gap-4 grid sm:grid-cols-3">
+
         <mat-form-field>
-            <mat-label>Adultos:</mat-label>
-            <input
-                matInput
-                thousandSeparator="."
-                decimalMarker=","
-                mask="separator.0">
+            <mat-label>Econômica:</mat-label>
+            <span matTextPrefix *ngIf="economy.getRawValue()">R$</span>
+            <input mask="separator.2" thousandSeparator="." decimalMarker="," formControlName="economy" matInput type="text">
         </mat-form-field>
+
         <mat-form-field>
-            <mat-label>Crianças:</mat-label>
-            <input
-                matInput
-                thousandSeparator="."
-                decimalMarker=","
-                mask="separator.0">
+            <mat-label>Executiva:</mat-label>
+            <span matTextPrefix *ngIf="business.getRawValue()">R$</span>
+            <input mask="separator.2" thousandSeparator="." decimalMarker="," formControlName="business" matInput type="text">
         </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Primeira Classe:</mat-label>
+            <span matTextPrefix *ngIf="firstClass.getRawValue()">R$</span>
+            <input mask="separator.2" thousandSeparator="." decimalMarker="," formControlName="firstClass" matInput type="text">
+        </mat-form-field>
+
     </div>
-    <div class="font-semibold text-xl">Viajem:</div>
+    <div class="font-semibold text-xl">Partida:</div>
     <div class="p-4 gap-4 grid sm:grid-cols-3">
-        <mat-form-field>
-            <mat-label>Estado:</mat-label>
-            <input matInput>
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Passagem Máxima:</mat-label>
-            <span *ngIf="" matTextPrefix>R$</span>
-            <input
-                matInput
-                thousandSeparator="."
-                decimalMarker=","
-                mask="separator.2">
-        </mat-form-field>
-        <mat-form-field>
-            <mat-label>Data:</mat-label>
-            <mat-date-range-input
-                [rangePicker]="dateFlight">
-                <input matStartDate placeholder="data mínima" type="text">
-                <input matEndDate placeholder="data máxima" type="text">
-            </mat-date-range-input>
-            <mat-hint>dd/mm/yyyy - dd/mm/yyyy</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="dateFlight"></mat-datepicker-toggle>
-            <mat-date-range-picker #dateFlight></mat-date-range-picker>
-        </mat-form-field>
+        <ng-container formGroupName="location">
+            <mat-form-field>
+                <mat-label>Estado:</mat-label>
+                <input formControlName="state" matInput type="text" [matAutocomplete]="autostate">
+                <mat-autocomplete autoActiveFirstOption #autostate="matAutocomplete">
+                    <mat-option [value]="null">-</mat-option>
+                    <mat-option *ngFor="let state of statesListFilter" [value]="state.name">{{ state.name }}</mat-option>
+                </mat-autocomplete>
+                <mat-error>
+                    O Estado é obrigatório.
+                </mat-error>
+            </mat-form-field>
+        </ng-container>
+        
+        <ng-container formGroupName="date">
+            <mat-form-field>
+                <mat-label>Data:</mat-label>
+                <mat-date-range-input
+                    [rangePicker]="dateFlight">
+                    <input formControlName="dateMin" matStartDate placeholder="data mínima" type="text">
+                    <input formControlName="dateMax" matEndDate placeholder="data máxima" type="text">
+                </mat-date-range-input>
+                <mat-hint>dd/mm/yyyy - dd/mm/yyyy</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="dateFlight"></mat-datepicker-toggle>
+                <mat-date-range-picker #dateFlight></mat-date-range-picker>
+                <mat-error *ngIf="dateMin.hasError('required') || dateMax.hasError('required')">
+                    O campo de faixa da Data é obrigatório.
+                </mat-error>
+                <mat-error *ngIf="date.hasError('rangeDateError') && !(dateMin.hasError('required') || dateMax.hasError('required'))">
+                    A Data mínima não pode ser maior do que a máxima.
+                </mat-error>
+            </mat-form-field>
+        </ng-container>
     </div>
-</div>
+</form>

@@ -1,3 +1,3 @@
-import { IFlight } from "../interfaces/airports/flight.interface";
+import { IFlightResponse } from "../interfaces/flight/flight-response.interface";
 
-export type FlightsList = IFlight[];
+export type FlightsList  = IFlightResponse[];
