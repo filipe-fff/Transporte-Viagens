@@ -16,6 +16,6 @@
         </app-buttons-container>
         <div class="p-4 ml-auto font-semibold">Aéroportos: {{ flightsListCount }}</div>
         <app-icons-descriptions></app-icons-descriptions>
-        <app-flights-card-list [flightsList]="flightsList"></app-flights-card-list>
+        <app-flights-card-list *ngIf="formFlightSubmit" [flightsList]="flightsList"></app-flights-card-list>
     </mat-card>
 </div>

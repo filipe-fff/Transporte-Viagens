@@ -18,6 +18,7 @@ export class TransportContainerComponent extends FlightController implements OnI
   _statesService = inject(StatesService);
 
   isInEditModel: boolean = true;
+  formFlightSubmit: boolean = false
   flightFormDisplay: IFlightFormResponse = {} as IFlightFormResponse;
   statesList: StatesList = [];
   flightsList: FlightsList = [];
@@ -74,6 +75,7 @@ export class TransportContainerComponent extends FlightController implements OnI
 
     this.getFlightsList();
     this.isInEditModel = false;
+    this.formFlightSubmit = true;
   }
 
   onEditButton() {
